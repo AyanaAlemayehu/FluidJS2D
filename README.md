@@ -8,4 +8,6 @@ FluidJS2D is a library aiding in the implementation of two dimensional web fluid
 
 # How can I help?
 
-Read TODO.md for a list of future features as well as current problems
+Read TODO.md for a list of future features, and see Issues for current problems
+
+For now, though, use suggestions.md to give input on where I should take this library
