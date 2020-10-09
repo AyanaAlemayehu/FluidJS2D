@@ -2,6 +2,10 @@
 
 FluidJS2D is a library aiding in the implementation of two dimensional web fluid simulations
 
+# How does it work?
+
+*(TBD)*
+
 # How can I use it?
 
 *(insert demo once finished project is closer)*
