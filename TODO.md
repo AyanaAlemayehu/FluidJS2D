@@ -16,6 +16,8 @@
 
 - Create a Demo.html file alongside css and js to demonstrate using this library
 
+- Make visual solution of 2D plates ASAP, then work from there to generalize (**prolly do this first**)
+
 ## What do I not understand?
 
 - For inviscid flows, how do different mini fluid elements interact with one another? Specifically, where in 
