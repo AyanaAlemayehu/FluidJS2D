@@ -8,6 +8,14 @@ FluidJS2D is a library aiding in the implementation of two dimensional web fluid
 
 # How can I use it?
 
+This library is split into two directories: **Visual** tools and **Calculation** tools
+
+## Visual Tools
+
+## Calculation Tools
+
+## Putting Them All Together
+
 *(insert demo once finished project is closer)*
 
 # How can I help?
