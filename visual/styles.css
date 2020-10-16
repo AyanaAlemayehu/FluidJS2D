@@ -5,10 +5,29 @@
     overflow: hidden;
 }
 .background{
+    position: absolute;
+    z-index: 0;
     background-color: gainsboro; /* Random grey I saw was pretty cool*/
-    width: 80%;
-    height: 80%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+.grid{
+    position: absolute;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+
+}
+.gridline{
+    background-color: black;
 }
