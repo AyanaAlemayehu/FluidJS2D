@@ -1,4 +1,4 @@
-class DivMap{
+class Interface{
     constructor(canvas, parentPercent, columns, rows){
         canvas.width = canvas.parentElement.offsetWidth*parentPercent;
         canvas.height = canvas.parentElement.offsetHeight*parentPercent;
@@ -22,6 +22,7 @@ class DivMap{
         gridOverlay.height = this.height;
         gridOverlay.setAttribute("class","grid");
         var ctx = gridOverlay.getContext("2d");
+        this.ctxGrid = ctx;
         this.canvas.parentElement.appendChild(gridOverlay);
 
         for (var i = 0; i < this.map.length; i++){
@@ -47,7 +48,23 @@ class DivMap{
         else
             this.gridOverlay.setAttribute("style","visibility:hidden");
     }
+    gridPoints(){
+        for (var i = 0; i < this.map.length; i++){
+            for (var k = 0; k < this.map[0].length; k++){
+                this.ctxGrid.beginPath();
+                this.ctxGrid.arc(k*(this.width/this.map[0].length), i*(this.height/this.map.length), 2, 0, 2*Math.PI);
+                this.ctxGrid.lineWidth = 1;
+                this.ctxGrid.strokeStyle = "rgb(0, 0, 0)";
+                this.ctxGrid.stroke();
+                // var coord = document.createElement("span"); i quit do this l8tr
+                // coord.innerHTML = "(" + k + "," + i + ")";
+                // coord.setAttribute("style", "position:absolute;left:" + k + "px");
+                // this.gridOverlay.appendChild(coord);
+            }
+        }
+    }
 }
 
-var temp = new DivMap(document.getElementById("CPlane"),.8, 20, 20);
+var temp = new Interface(document.getElementById("CPlane"),.8, 20, 20);
 temp.gridGen();
+temp.gridPoints();

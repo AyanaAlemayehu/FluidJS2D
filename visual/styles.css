@@ -26,8 +26,13 @@
     right:0px;
     top:0px;
     bottom:0px;
-
 }
 .gridline{
     background-color: black;
+}
+.mouseHide{
+    visibility: hidden;
+}
+:hover .mouseHide{
+    visibility: visible;
 }
