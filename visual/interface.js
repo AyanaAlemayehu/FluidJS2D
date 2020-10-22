@@ -1,4 +1,7 @@
 // here I want an import statement basically saying "import pVector from ../calc/vectors.js"
+const pVector = require('../calc/vectors').pVector(); //This uses the require function from Node.js
+const dVector = require('../calc/vectors').dVector(); 
+
 class FInterface{
     constructor(canvas, parentPercent, columns, rows){
         canvas.width = canvas.parentElement.offsetWidth*parentPercent;

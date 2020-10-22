@@ -24,3 +24,5 @@ class dVector {
     constructor()
 }
 
+module.exports.pVector = pVector;
+module.exports.dVector = dVector;
