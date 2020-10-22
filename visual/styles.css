@@ -5,6 +5,7 @@
     overflow: hidden;
 }
 .background{
+    transform: scale(1, -1); /*cause using canvas contexts, the origin is in the top left corner*/
     position: absolute;
     z-index: 0;
     background-color: gainsboro; /* Random grey I saw was pretty cool*/
@@ -17,8 +18,21 @@
     bottom:0px;
 }
 .grid{
+    transform: scale(1, -1);
     position: absolute;
     z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+.vectorOverlay{
+    transform: scale(1, -1);
+    position: absolute;
+    z-index: 2;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
