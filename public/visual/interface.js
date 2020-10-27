@@ -11,6 +11,7 @@ class FInterface{
         this.yStep = canvas.height/rows;
         this.ctx = canvas.getContext("2d");
         this.map = [];
+        this.maxMagnitude = 0;
         for (var i = 0; i < rows; i++){
             this.map[i] = [];
             for (var k = 0; k < columns; k++){
@@ -59,10 +60,18 @@ class FInterface{
         for (var i = 0; i < this.map.length; i++){
             for (var k = 0; k < this.map[0].length; k++){
                 this.map[i][k].vector = new pVector(vEqX(this.map[i][k].x, this.map[i][k].y), vEqY(this.map[i][k].x,this.map[i][k].y), this.map[i][k].x, this.map[i][k].y);
-                this.map[i][k].vector.drawVector(10, this)//make longest the largest mag vector
+                if (this.maxMagnitude < this.map[i][k].vector.mag) //finds out what the longest vector is
+                    this.maxMagnitude = this.map[i][k].vector.mag;
             }
         }
         
+    }
+    drawVectors(length){//how long you want the longest vector to be in pixels
+        for (var i = 0; i < this.map.length; i++){
+            for (var k = 0; k < this.map[0].length; k++){
+                this.map[i][k].vector.drawVector(length*(this.map[i][k].vector.mag/this.maxMagnitude), this)//make longest the largest mag vector
+            }
+        }
     }
     vectorToggle(){
         if (this.vectorOverlay.getAttribute("style", "visibility") == "visibility:hidden")
@@ -102,8 +111,9 @@ function xEquation(X,Y){
     return (V_0/h)*Y;
 }
 function yEquation(X, Y){ //must have both x and y
-    return 0;
+    return X;
 }
 temp.initVectors(xEquation, yEquation);
-console.log(temp.map[0][0]);
+temp.drawVectors(10);
+console.log(temp.maxMagnitude);
 //initialize all dVectors, connect them to each array for each point, and draw the vectors
