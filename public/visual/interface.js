@@ -59,6 +59,7 @@ class FInterface{
         for (var i = 0; i < this.map.length; i++){
             for (var k = 0; k < this.map[0].length; k++){
                 this.map[i][k].vector = new pVector(vEqX(this.map[i][k].x, this.map[i][k].y), vEqY(this.map[i][k].x,this.map[i][k].y), this.map[i][k].x, this.map[i][k].y);
+                this.map[i][k].vector.drawVector(10, this)//make longest the largest mag vector
             }
         }
         
@@ -96,13 +97,13 @@ var temp = new FInterface(document.getElementById("CPlane"),.8, 40, 20);
 temp.gridGen();
 temp.gridPoints();
 function xEquation(X,Y){
-    V_0 = 10;
-    h = 20;
+    var V_0 = 10;
+    var h = 20;
     return (V_0/h)*Y;
 }
 function yEquation(X, Y){ //must have both x and y
     return 0;
 }
 temp.initVectors(xEquation, yEquation);
-
+console.log(temp.map[0][0]);
 //initialize all dVectors, connect them to each array for each point, and draw the vectors
