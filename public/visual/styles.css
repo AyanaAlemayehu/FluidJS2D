@@ -11,7 +11,7 @@
     background-color: gainsboro; /* Random grey I saw was pretty cool*/
     margin-left: 7%;
     margin-right: 10%;
-    margin-top: 3%;
+    margin-top: 2%;
     left:0px;
     right:0px;
     top:0px;
@@ -23,7 +23,7 @@
     z-index: 1;
     margin-left: 7%;
     margin-right: 10%;
-    margin-top: 3%;
+    margin-top: 2%;
     left:0px;
     right:0px;
     top:0px;
@@ -35,7 +35,7 @@
     z-index: 2;
     margin-left: 7%;
     margin-right: 10%;
-    margin-top: 3%;
+    margin-top: 2%;
     left:0px;
     right:0px;
     top:0px;
@@ -43,6 +43,20 @@
 }
 .gridline{
     background-color: black;
+}
+.toolbar{
+    position: absolute;
+    z-index: 0;
+    height:15%;
+    width:79.5%;
+    margin-left: 7%;
+    margin-right: 10%;
+    margin-top: 2%;
+    left:0px;
+    right:0px;
+    top: 80%;
+    bottom:0px;
+    border: 3px solid #73AD21;
 }
 .mouseHide{
     visibility: hidden;

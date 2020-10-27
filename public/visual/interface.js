@@ -106,7 +106,7 @@ var temp = new FInterface(document.getElementById("CPlane"),.8, 40, 20);
 temp.gridGen();
 temp.gridPoints();
 function xEquation(X,Y){
-    var V_0 = 10;
+    var V_0 = 100;
     var h = 20;
     return (V_0/h)*Y;
 }
