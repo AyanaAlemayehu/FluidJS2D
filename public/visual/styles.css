@@ -9,9 +9,9 @@
     position: absolute;
     z-index: 0;
     background-color: gainsboro; /* Random grey I saw was pretty cool*/
-    margin-left: 10%;
+    margin-left: 7%;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 3%;
     left:0px;
     right:0px;
     top:0px;
@@ -21,9 +21,9 @@
     transform: scale(1, -1);
     position: absolute;
     z-index: 1;
-    margin-left: 10%;
+    margin-left: 7%;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 3%;
     left:0px;
     right:0px;
     top:0px;
@@ -33,9 +33,9 @@
     transform: scale(1, -1);
     position: absolute;
     z-index: 2;
-    margin-left: 10%;
+    margin-left: 7%;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 3%;
     left:0px;
     right:0px;
     top:0px;
