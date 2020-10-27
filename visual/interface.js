@@ -1,4 +1,5 @@
 // here I want an import statement basically saying "import pVector from ../calc/vectors.js"
+import {pVector} from "../calc/vectors.js";
 class FInterface{
     constructor(canvas, parentPercent, columns, rows){
         canvas.width = canvas.parentElement.offsetWidth*parentPercent;
