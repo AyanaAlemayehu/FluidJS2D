@@ -50,7 +50,7 @@ class dVector {
     }
 }
 
-
+export{pVector}
 // for the function Vx = V_0/h_1)*y*mu, draw out each direction vector of velocity at each point
 //might have to deal with 1/0 in atan
 //think ill have a UNIVERSAL TIME variable 
