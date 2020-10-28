@@ -9,7 +9,7 @@
     position: absolute;
     z-index: 0;
     background-color: gainsboro; /* Random grey I saw was pretty cool*/
-    margin-left: 7%;
+    margin-left: 5%;
     margin-right: 10%;
     margin-top: 2%;
     left:0px;
@@ -21,7 +21,7 @@
     transform: scale(1, -1);
     position: absolute;
     z-index: 1;
-    margin-left: 7%;
+    margin-left: 5%;
     margin-right: 10%;
     margin-top: 2%;
     left:0px;
@@ -33,7 +33,7 @@
     transform: scale(1, -1);
     position: absolute;
     z-index: 2;
-    margin-left: 7%;
+    margin-left: 5%;
     margin-right: 10%;
     margin-top: 2%;
     left:0px;
@@ -49,7 +49,7 @@
     z-index: 0;
     height:15%;
     width:79.5%;
-    margin-left: 7%;
+    margin-left: 5%;
     margin-right: 10%;
     margin-top: 2%;
     left:0px;
@@ -57,6 +57,15 @@
     top: 80%;
     bottom:0px;
     border: 3px solid #73AD21;
+}
+.button{
+    position:relative;
+    float:left;
+    width: 60px;
+    height: 20px;
+    font-size: 9px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .mouseHide{
     visibility: hidden;

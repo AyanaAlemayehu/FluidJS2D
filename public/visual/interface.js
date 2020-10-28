@@ -101,19 +101,4 @@ class FInterface{
         }
     }
 }
-
-var temp = new FInterface(document.getElementById("CPlane"),.8, 40, 20);
-temp.gridGen();
-temp.gridPoints();
-function xEquation(X,Y){
-    var V_0 = 100;
-    var h = 20;
-    return (V_0/h)*Y;
-}
-function yEquation(X, Y){ //must have both x and y
-    return X;
-}
-temp.initVectors(xEquation, yEquation);
-temp.drawVectors(10);
-console.log(temp.maxMagnitude);
-//initialize all dVectors, connect them to each array for each point, and draw the vectors
+export{FInterface};
