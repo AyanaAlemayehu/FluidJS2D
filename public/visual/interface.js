@@ -80,6 +80,7 @@ class FInterface{
             this.vectorOverlay.setAttribute("style","visibility:hidden");
     }
     gridToggle(){
+        console.log(this);
         if (this.gridOverlay.getAttribute("style", "visibility") == "visibility:hidden")
             this.gridOverlay.setAttribute("style","visibility:visible");
         else
