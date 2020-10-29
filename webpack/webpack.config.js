@@ -28,9 +28,11 @@ module.exports = {// Environment mode
     devServer: {
 
         // Serve index.html as the base
-        contentBase: resolveAppPath('public'), 
-    
-        // Enable compression
+
+        //contentBase: resolveAppPath('public'), 
+        // Saida: Is index.html going to be a static file? From web-pack documentation, contentBase primarile serves static content like media and stuff
+        
+       // Enable compression
         compress: true,
     
         // Enable hot reloading
