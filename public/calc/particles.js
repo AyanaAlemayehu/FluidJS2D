@@ -20,6 +20,13 @@ class Particle{
         FInterface.ctxParticle.fill();
     }
     increment(){
+        if (!this.trail){
+            //this.FInterface.ctxParticle.clearRect(x - this.radius, y - this.radius, x + 2*this.radius, y + 2*this.radius);
+            this.FInterface.ctxParticle.beginPath();
+            this.FInterface.ctxParticle.clearRect(this.x*this.FInterface.xStep - 1 - this.radius, this.y*this.FInterface.yStep - 1 - this.radius, 3*this.radius, 3*this.radius);//the -1 gets rid of floating point errors
+            // this.FInterface.ctxParticle.fill();
+            //this.FInterface.ctxParticle.clearRect(0, 0, this.FInterface.canvas.width, this.FInterface.canvas.height);
+        }
         if (!this.pauser.pause){
             var x = this.x;
             var y = this.y;
@@ -30,10 +37,11 @@ class Particle{
         }else if (this.pauser.pause){
             this.tAdded = this.t;
             this.startT = new Date().getTime();
+            this.drawPart();
         }
     }
     runInterval(){
-        window.setInterval(this.increment.bind(this), this.deltaT);
+        return window.setInterval(this.increment.bind(this), this.deltaT);
     }
 
 }
