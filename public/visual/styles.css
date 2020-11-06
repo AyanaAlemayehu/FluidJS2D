@@ -1,0 +1,115 @@
+.backgroundParent {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    overflow: hidden;
+}
+.background{
+    transform: scale(1, -1); /*cause using canvas contexts, the origin is in the top left corner*/
+    position: absolute;
+    z-index: 0;
+    background-color: gainsboro; /* Random grey I saw was pretty cool*/
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+.grid{
+    transform: scale(1, -1);
+    position: absolute;
+    z-index: 1;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+.vectorOverlay{
+    transform: scale(1, -1);
+    position: absolute;
+    z-index: 2;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+.particleOverlay{
+    transform: scale(1, -1);
+    position: absolute;
+    z-index: 3;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px; 
+}
+.gridline{
+    background-color: black;
+}
+.toolbar{
+    position: absolute;
+    z-index: 0;
+    height:15%;
+    width:79.5%;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    left:0px;
+    right:0px;
+    top: 80%;
+    bottom:0px;
+    border: 3px solid #73AD21;
+}
+.sidebar{
+    position: absolute;
+    z-index: 0;
+    height:95%;
+    width:15%;
+    margin-left: 85%;
+    margin-top: 2%;
+    left:0px;
+    right:0px;
+    top: 0px;
+    bottom:0px;
+    border: 3px solid #73AD21;
+}
+h1 {
+    font-family: Helvetica, Verdana, sans-serif;
+    font-size: 12px;
+    color:black;
+}
+.button{
+
+    font-family: monospace, sans-serif;
+    height: 4em;
+    width: 8em;
+    background-color: rgb(180, 180, 180);
+    border-radius: 10%;
+    border: 1px solid black;
+    position:relative;
+    float:left;
+    /* width: 78px;
+    height: 45px;
+    font-size: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: white;
+    text-decoration: none;
+    padding: 2px; */
+}
+.mouseHide{
+    visibility: hidden;
+}
+:hover .mouseHide{
+    visibility: visible;
+}
