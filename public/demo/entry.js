@@ -2,8 +2,8 @@
 //THIS IS THE BIGGEST PLACE WHERE I WOULD HAVE HARDCODED STUFF
 import {FInterface} from "../visual/interface.js";
 import {Particle} from "../calc/particles.js";
-var col = 40;
-var row = 20;
+var col = 80;
+var row = 40;
 var scaleFromParent = .8;
 var maxVectorLength = 15;
 var isPaused = {pause: false}; //EVERY INTERVAL FUNCTION WILL TAKE THIS AS INPUT SO I CAN CONTROL IT. IT IS A OBJECT SO I PASS A REFERNCE TO FUNCTIONS NOT A VALUE
@@ -13,10 +13,10 @@ var numInstances = 0;
 function xEquation(X, Y, T){
     var V_0 = 1;
     var h = col;
-    return (V_0/h)*Y*Math.cos(T);
+    return (V_0/h)*Y*T*.01;
 }
 function yEquation(X, Y, T){ //must have both x and y
-    return X*.01*Math.sin(T);
+    return 0.01*T; 
 }
 var temp = new FInterface(document.getElementById("CPlane"),scaleFromParent, col, row, xEquation, yEquation, isPaused);
 temp.gridGen();

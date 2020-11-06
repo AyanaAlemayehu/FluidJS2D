@@ -1,4 +1,5 @@
 // WHEN YOU CHANGE START T, YOU STOP THE PARTICLE FROM BEING IN SYNC WITH THE BACKGROUND VECTOR FIELD
+// ERROR WHERE PARTICLES DISSAPPEAR IN TIME DEPENDENT VECTOR FIELDS WHEN TIME IS PAUSED
 class Particle{
     constructor(x, y, FInterface, deltaT, radius, pauser, startT = 0, trail = false, color = "black"){//START T NEEDA BE IN MILLISECONDS IS ADDED TO WHAT DATE GETTIME GIVES
         this.x = x;
@@ -35,7 +36,7 @@ class Particle{
             this.y += this.FInterface.vEqY(x, y, this.t*.001);//
             this.drawPart();
         }else if (this.pauser.pause){
-            this.tAdded = this.t;
+            this.tAdded = this.t ? this.t : this.FInterface.t; //this is supposed to fix the error where particles disappear in time dependent vector fields
             this.startT = new Date().getTime();
             this.drawPart();
         }
