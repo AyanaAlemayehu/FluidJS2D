@@ -1,6 +1,21 @@
+/*
+* @summary This class is used to generate particles (the dots) that are used to simulate experimenting with the fluid simulation
+*/
 // WHEN YOU CHANGE START T, YOU STOP THE PARTICLE FROM BEING IN SYNC WITH THE BACKGROUND VECTOR FIELD
 // ERROR WHERE PARTICLES DISSAPPEAR IN TIME DEPENDENT VECTOR FIELDS WHEN TIME IS PAUSED
 class Particle{
+    /*
+    *@class
+    * @param x {int}: x location of the particle, relative to the cartesian plane (NOT the pixel x location)
+    * @param y {int}: y location of the particle, again relative to the cartesian plane
+    * @param FInterface {FInterface}: FInterface object used to run the fluid simulation
+    * @param deltaT {int}: rate at which the interval function drawing the particle runs at
+    * @param radius {int}: radius of the particle
+    * @param pauser {object}: pausing object used to stop and resume the particles movement
+    * @param startT {int}: starting time of the particles movement in the vector field. Defaults to zero
+    * @param trail {boolean}: used to decide if particle leaves a trail in the particleOverlay
+    * @param color {String}: color of the particle
+    */
     constructor(x, y, FInterface, deltaT, radius, pauser, startT = 0, trail = false, color = "black"){//START T NEEDA BE IN MILLISECONDS IS ADDED TO WHAT DATE GETTIME GIVES
         this.x = x;
         this.y = y;
@@ -13,6 +28,8 @@ class Particle{
         this.color = color;
         this.FInterface = FInterface;
     }
+
+    // @summary draws the particle onto the particleOverlay canvas context
     drawPart(){
         var FInterface = this.FInterface;
         FInterface.ctxParticle.beginPath();
@@ -20,6 +37,8 @@ class Particle{
         FInterface.ctxParticle.fillStyle = this.color;
         FInterface.ctxParticle.fill();
     }
+
+    // @summary draws as well as increments the position and time components of the particle accordingly
     increment(){
         if (!this.trail){
             //this.FInterface.ctxParticle.clearRect(x - this.radius, y - this.radius, x + 2*this.radius, y + 2*this.radius);
@@ -41,6 +60,9 @@ class Particle{
             this.drawPart();
         }
     }
+
+    // @summary runs the increment() function through a window.setInterval function, using deltaT to judge how often it runs.
+    //  @return {int}: returns the id of the setInterval call.
     runInterval(){
         return window.setInterval(this.increment.bind(this), this.deltaT);
     }

@@ -1,3 +1,7 @@
+/*
+* This file configurates the webpack server used to run the demonstration. Is not required for the functionality of the base library.
+*/
+
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -28,9 +32,7 @@ module.exports = {// Environment mode
     devServer: {
 
         // Serve index.html as the base
-
         contentBase: resolveAppPath('public'), 
-        //Saida: Is index.html going to be a static file? From web-pack documentation, contentBase primarile serves static content like media and stuff
         
        // Enable compression
         compress: true,

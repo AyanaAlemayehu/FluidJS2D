@@ -5,7 +5,7 @@
     overflow: hidden;
 }
 .background{
-    transform: scale(1, -1); /*cause using canvas contexts, the origin is in the top left corner*/
+    transform: scale(1, -1); /*cause using canvas contexts, the origin is in the top left corner, so transforming flips it correctly*/
     position: absolute;
     z-index: 0;
     background-color: gainsboro; /* Random grey I saw was pretty cool*/
@@ -68,7 +68,7 @@
     right:0px;
     top: 80%;
     bottom:0px;
-    border: 3px solid #73AD21;
+    border: 3px solid lightskyblue;
 }
 .sidebar{
     position: absolute;
@@ -81,7 +81,7 @@
     right:0px;
     top: 0px;
     bottom:0px;
-    border: 3px solid #73AD21;
+    border: 3px solid lightskyblue;
 }
 h1 {
     font-family: Helvetica, Verdana, sans-serif;
@@ -89,7 +89,6 @@ h1 {
     color:black;
 }
 .button{
-
     font-family: monospace, sans-serif;
     height: 4em;
     width: 8em;
@@ -98,14 +97,6 @@ h1 {
     border: 1px solid black;
     position:relative;
     float:left;
-    /* width: 78px;
-    height: 45px;
-    font-size: 16px;
-    padding-left: 0px;
-    padding-right: 0px;
-    color: white;
-    text-decoration: none;
-    padding: 2px; */
 }
 .mouseHide{
     visibility: hidden;
