@@ -1,8 +1,7 @@
 /*
 * @summary This class is used to generate particles (the dots) that are used to simulate experimenting with the fluid simulation
 */
-// WHEN YOU CHANGE START T, YOU STOP THE PARTICLE FROM BEING IN SYNC WITH THE BACKGROUND VECTOR FIELD
-// ERROR WHERE PARTICLES DISSAPPEAR IN TIME DEPENDENT VECTOR FIELDS WHEN TIME IS PAUSED
+// WHEN YOU CHANGE startT, YOU STOP THE PARTICLE FROM BEING IN SYNC WITH THE BACKGROUND VECTOR FIELD
 class Particle{
     /*
     *@class

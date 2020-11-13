@@ -1,14 +1,14 @@
 import {pVector} from "../calc/vectors.js";
 /*
-* @summary This is the class used to generate an interface (called fluid interface or FInterface) between the visual components 
+* @summary class used to generate an interface (called fluid interface or FInterface) between the visual components 
 * of the library and the caclulation components. It can be thought of as bridging the gap between what you see and what the 
 * computer "sees".
 */
 class FInterface{
     /*
     *@class
-    * @param canvas {canvas element}: This is the canvas element the fluid simulation will reference in its operation.
-    * @param parentPercent {int}: This is the factor the fluid simulation will use to scale with the canvas element's parent element
+    * @param canvas {canvas element}: canvas element the fluid simulation will reference in its operation.
+    * @param parentPercent {int}: factor the fluid simulation will use to scale with the canvas element's parent element
     * @param colums {int}: The number of columns
     * @param rows {int}: The number of rows
     * @param vEqX {function}: the x velocity equation

@@ -1,13 +1,13 @@
 /*
-* @summary This is the class used for position vectors, and generally any vector that does not dynamically change.
+* @summary class used for position vectors, and generally any vector that does not dynamically change.
 */
 class pVector {
     /*
     *@class
-    * @param xCoeff {int}: This is the coefficient of the x component of the velocity field, or the coefficient of the i unit vector
-    * @param yCoeff {int}: This is the coefficient of the y component of the velocity field, or the coefficient of the j unit vector
-    * @param xLoc {int}: This is the x location of the vector, relative to the cartesian plane (NOT the pixel x location)
-    * @param yLoc {int}: This is the y location of the vector, again relative to the cartesian plane
+    * @param xCoeff {int}: coefficient of the x component of the velocity field, or the coefficient of the i unit vector
+    * @param yCoeff {int}: coefficient of the y component of the velocity field, or the coefficient of the j unit vector
+    * @param xLoc {int}: x location of the vector, relative to the cartesian plane (NOT the pixel x location)
+    * @param yLoc {int}: y location of the vector, again relative to the cartesian plane
     */
     constructor(xCoeff, yCoeff, xLoc, yLoc){// xLoc and yLoc are INTEGERS relative to the size of the entire canvas, using xStep and yStep to accomodate
         this.xLoc = xLoc;
@@ -16,8 +16,8 @@ class pVector {
         this.mag = Math.sqrt(xCoeff**2 + yCoeff**2);
     }
     /*
-    *@summary This function draws a vector using the calculated angle for direction and inputted length for visual length.
-    * @param length: This is the length of the vector. Is an integer, but will represent the length of the vetor in pixels. 
+    *@summary draws a vector using the calculated angle for direction and inputted length for visual length.
+    * @param length: length of the vector. Is an integer, but will represent the length of the vetor in pixels. 
     */
     drawVector(length, FInterface){
         FInterface.ctxVector.beginPath();

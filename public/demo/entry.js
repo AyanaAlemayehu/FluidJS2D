@@ -5,6 +5,7 @@
 */
 import {FInterface} from "../visual/interface.js";
 import {Particle} from "../calc/particles.js";
+
 //Important variables.
 var col = 80;
 var row = 40;
@@ -22,12 +23,12 @@ var isTrail = {trail: false};
 function xEquation(X, Y, T){
     var V_0 = 1;
     var h = col;
-    return Math.cos(T);
+    return Math.cos(T)*.1;
 }
 
 //The y equation of each vector. Again, notice the parameters and their order.
 function yEquation(X, Y, T){
-    return Math.sin(T); 
+    return Math.sin(T)*.1; 
 }
 
 //This is the instance of FInterface, one of the library components, used to run my simulation. Every one of the parameters
