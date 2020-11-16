@@ -22,7 +22,7 @@ module.exports = {// Environment mode
     mode: 'development',
   
     // Entry point of app
-    entry: resolveAppPath('demo'),
+    entry: resolveAppPath('demo/public'),
   
     output: {
   
@@ -32,7 +32,7 @@ module.exports = {// Environment mode
     devServer: {
 
         // Serve index.html as the base
-        contentBase: resolveAppPath('public'), 
+        contentBase: resolveAppPath('demo/public'), 
         
        // Enable compression
         compress: true,

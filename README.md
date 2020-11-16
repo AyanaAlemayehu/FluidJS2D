@@ -36,4 +36,4 @@ way to use the library to create a simulation, while showing how to properly use
 
 # How can I help?
 
-Submit issues if you find any, use suggestions.md to add suggestions and submit a PR.
+Submit issues if you find any, and use suggestions.md to add suggestions (submit a PR when done).
