@@ -1,0 +1,42 @@
+<!--
+ This file sets up the html components needed to run the visual components of my demonstration. The most important
+ component relative to someone else creating their own 2D simulator is the "CPlane" canvas element, the starting
+ off part for my library.
+--> 
+<!DOCTYPE html>
+<html style="width:100%; height:100%; color:white;">
+    <head>
+        <link rel="stylesheet" href="../visual/styles.css">
+    </head>
+    <body class="backgroundParent">
+        <div class = "backgroundParent">
+            <canvas id="CPlane"class = "background">
+        </canvas>
+        <div id="toolbar" class="toolbar">
+            <div id="buttons">
+                <button id="gridToggleBtn" class="button">Toggle Grid</button>
+                <button id="vectorToggleBtn" class="button">Toggle Vectors</button>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <div id="timeStuff">
+                <center>
+                <h1 id="timeOutput">Seconds: 0</h1>
+                <button class="play button" id="play">Play</button>
+                <button class="pause button" id="pause">Pause</button>
+                <button class="trail button" id="trail">Trail Toggle</button>
+                <button class="button" id="clear">Clear</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <span style="color:black">Particle Color:<input type="text" id="Color"></span>
+            </center>
+            </div>
+        </div>
+    </div>
+    <script type = "module" src="entry.js"></script>
+    </body>
+</html>
