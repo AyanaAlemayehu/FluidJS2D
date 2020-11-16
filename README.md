@@ -1,5 +1,3 @@
-(repository link for npm site: https://github.com/AyanaAlemayehu/FluidJS2D/tree/v1.1)
-
 # What is FluidJS2D?
 
 FluidJS2D is a library aiding in the visualization of two dimensional web fluid simulations
