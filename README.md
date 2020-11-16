@@ -1,3 +1,5 @@
+(repository link for npm site: https://github.com/AyanaAlemayehu/FluidJS2D/tree/v1.1)
+
 # What is FluidJS2D?
 
 FluidJS2D is a library aiding in the visualization of two dimensional web fluid simulations
@@ -33,6 +35,14 @@ and draw vectors visualizing the behavior of the fluid simulation at specific po
 
 Included in this library is a demonstration of how to use the library, located in the ```demo``` directory under ```public```. The ```index.html``` file demonstrates how to set up an html environment suitable to interact with the library, while the ```entry.js``` file shows a potential
 way to use the library to create a simulation, while showing how to properly use all of the library's components.
+
+To simply run the demonstration, use git to clone this repository into a suitable folder. Then, use git bash (or any other command
+line console that can take git commands) to navigate into the cloned folder and type the line ```npm start```. Finally, navigate to
+a browser and type 
+```
+http://localhost:3000
+```
+in the search field. Click on the html folder, and the vector simulation should lay before you.
 
 # How can I help?
 
