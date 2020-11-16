@@ -1,7 +1,7 @@
 /*
 * @summary class used for position vectors, and generally any vector that does not dynamically change.
 */
-class pVector {
+class PVector {
     /*
     *@class
     * @param xCoeff {int}: coefficient of the x component of the velocity field, or the coefficient of the i unit vector
@@ -29,4 +29,4 @@ class pVector {
         FInterface.ctxVector.stroke();
     }
 }
-export{pVector}
+export{PVector}

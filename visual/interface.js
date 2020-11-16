@@ -1,4 +1,4 @@
-import {pVector} from "../calc/vectors.js";
+import {PVector} from "../calc/vectors.js";
 /*
 * @summary class used to generate an interface (called fluid interface or FInterface) between the visual components 
 * of the library and the caclulation components. It can be thought of as bridging the gap between what you see and what the 
@@ -82,7 +82,7 @@ class FInterface{
         this.canvas.parentElement.appendChild(vectorOverlay);
         for (var i = 0; i < this.map.length; i++){
             for (var k = 0; k < this.map[0].length; k++){
-                this.map[i][k].vector = new pVector(vEqX(this.map[i][k].x, this.map[i][k].y, 0), vEqY(this.map[i][k].x,this.map[i][k].y, 0), this.map[i][k].x, this.map[i][k].y);
+                this.map[i][k].vector = new PVector(vEqX(this.map[i][k].x, this.map[i][k].y, 0), vEqY(this.map[i][k].x,this.map[i][k].y, 0), this.map[i][k].x, this.map[i][k].y);
                 // the if conditional below is used to find out the largest magnitude vector to scale all other vectors
                 if (this.maxMagnitude < this.map[i][k].vector.mag)
                     this.maxMagnitude = this.map[i][k].vector.mag;
@@ -101,7 +101,7 @@ class FInterface{
             this.t = (dateObject.getTime() - this.startT)*.001 + this.timeOffset;
             for (var i = 0; i < this.map.length; i++){
                 for (var k = 0; k < this.map[0].length; k++){
-                    this.map[i][k].vector = new pVector(vEqX(this.map[i][k].x, this.map[i][k].y, this.t), vEqY(this.map[i][k].x,this.map[i][k].y, this.t), this.map[i][k].x, this.map[i][k].y);
+                    this.map[i][k].vector = new PVector(vEqX(this.map[i][k].x, this.map[i][k].y, this.t), vEqY(this.map[i][k].x,this.map[i][k].y, this.t), this.map[i][k].x, this.map[i][k].y);
                     if (this.maxMagnitude < this.map[i][k].vector.mag) //finds out what the longest vector is
                         this.maxMagnitude = this.map[i][k].vector.mag;
                 }
@@ -172,3 +172,4 @@ class FInterface{
         }
     }
 }
+export{FInterface};
