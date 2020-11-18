@@ -42,6 +42,9 @@ http://localhost:3000
 ```
 in the search field. Click on the html folder, and the vector simulation should lay before you.
 
+*what you should see*
+![Demonstration Photo](/demo/public/img/demonstration.jpg)
+
 # How can I help?
 
 Submit issues if you find any, and use suggestions.md to add suggestions (submit a PR when done).
