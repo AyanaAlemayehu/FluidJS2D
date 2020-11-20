@@ -23,12 +23,12 @@ var isTrail = {trail: false};
 function xEquation(X, Y, T){
     var V_0 = 1;
     var h = col;
-    return Math.sinh(T)*Math.tan(T)*.01;
+    return Math.cos(T)*.01 + T*.01;
 }
 
 //The y equation of each vector. Again, notice the parameters and their order.
 function yEquation(X, Y, T){
-    return Math.sin(T)*.1; 
+    return Math.sin(T)*.01 + T*.01; 
 }
 
 //This is the instance of FInterface, one of the library components, used to run my simulation. Every one of the parameters
