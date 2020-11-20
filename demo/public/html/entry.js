@@ -21,9 +21,8 @@ var isTrail = {trail: false};
 //The x equation that dictates the x component of each vector. Notice the parameters (X, Y, T) and their order.
 //Every equation must follow the sequence of x component, y component and time as their parameter list.
 function xEquation(X, Y, T){
-    var V_0 = 1;
-    var h = col;
-    return Math.cos(T)*(T*.01);
+
+    return Math.cos(T)*(T*.01) - (X - 40)*.1;
 }
 
 //The y equation of each vector. Again, notice the parameters and their order.
